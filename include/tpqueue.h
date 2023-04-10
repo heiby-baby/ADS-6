@@ -23,14 +23,12 @@ class TPQueue {
     if (isFull()) {
       throw std::string("Full");
     } else {
-      
       int j = last;
       for (int i = first; i<last; i++) {
         if (value.prior > arr[i].prior) {
           j = i;
         }
-        i++;
-      }
+    }
       for (int i = last; i > j; i--) {
         arr[i % size] = arr[(i - 1) % size];
       }
