@@ -8,7 +8,6 @@ class TPQueue {
  private:
   T* arr;
   int last, first, count;
-  
  public:
   TPQueue() : last(0), first(0), count(0) {
     arr = new T[size];
@@ -34,11 +33,11 @@ class TPQueue {
       for (int i = last; i > j; i--) {
         arr[i % size] = arr[(i - 1) % size];
       }
-      arr[j % size] = value.ch;
+      arr[j % size] = value;
     }
       count++;
       last++;
-	}
+  }
   const T& pop() {
     if (isEmpty() {
       throw std::string("Empty");
