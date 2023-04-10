@@ -40,7 +40,7 @@ class TPQueue {
       last++;
   }
   const T& pop() {
-    if (isEmpty() {
+    if (isEmpty()) {
       throw std::string("Empty");
     } else {
       --count;
