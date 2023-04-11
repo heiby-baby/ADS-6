@@ -25,7 +25,7 @@ class TPQueue {
     } else {
       int i = first;
       int j = last;
-      while (value.prior < arr[i].prior) {
+      while (value.prior > arr[i].prior) {
         i++;
         j = i;
       }
