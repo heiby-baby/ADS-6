@@ -24,9 +24,10 @@ class TPQueue {
       throw std::string("Full");
     } else {
       int j = last;
-      for (int i = first; i<last; i++) {
+      while (value.prior < arr[i].prior) {
         if (value.prior > arr[i].prior) {
           j = i;
+          break;
         }
     }
       for (int i = last; i > j; i--) {
