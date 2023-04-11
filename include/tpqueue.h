@@ -29,13 +29,13 @@ class TPQueue {
         i++;
         j = i;
       }
+      for (int i = last; i > j; i--) {
+        arr[i % size] = arr[(i - 1) % size];
+      }
+      arr[j % size] = value;
+      count++;
+      last++;
     }
-    for (int i = last; i > j; i--) {
-      arr[i % size] = arr[(i - 1) % size];
-    }
-    arr[j % size] = value;
-    count++;
-    last++;
   }
   const T& pop() {
     if (isEmpty()) {
