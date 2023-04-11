@@ -29,7 +29,7 @@ class TPQueue {
         i++;
         j = i;
       }
-      j+=1;
+      j-=1;
       for (int i = last; i > j; i--) {
         arr[i % size] = arr[(i - 1) % size];
       }
