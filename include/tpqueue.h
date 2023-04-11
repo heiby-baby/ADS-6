@@ -26,10 +26,9 @@ class TPQueue {
       int i = first;
       int j = last;
       while (value.prior > arr[i].prior) {
-        i++;
         j = i;
+        i++;
       }
-      j-=1;
       for (int i = last; i > j; i--) {
         arr[i % size] = arr[(i - 1) % size];
       }
